@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue">
+	<h1>Wine Class Detection</h1><br>
+<form action="{{url_for('predict')}}", method="POST">
+<b> 
+	Alcohol <input type="text", name='a', placeholder="enter 1"><br><br>
+	Malic acid <input type="text", name='b', placeholder="enter 2"><br><br>
+	Ash <input type="text", name='c', placeholder="enter 3"><br><br>
+	Alcalinity of ash <input type="text", name='d', placeholder="enter 4"><br><br>
+	Magnesium <input type="text", name='e', placeholder="enter 5"><br><br>
+	Total phenols <input type="text", name='f', placeholder="enter 6"><br><br>
+	Flavanoids <input type="text", name='g', placeholder="enter 7"><br><br>
+	Nonflavanoid phenols <input type="text", name='h', placeholder="enter 8"><br><br>
+	Proanthocyanins <input type="text", name='i', placeholder="enter 9"><br><br>
+	Color intensity <input type="text", name='j', placeholder="enter 10"><br><br>
+	Hue <input type="text", name='k', placeholder="enter 11"><br><br>
+	od280/od315 of diluted wines<input type="text", name='l', placeholder="enter 12"><br><br>
+	Proline  <input type="text", name='m', placeholder="enter 13"><br><br>
+
+	<button type="submit", class="btn">Predict</button><br><br>
+
+</form>
+<!--Prediction Result-->
+	<div id ="result">
+		<strong style="color:red">{{prediction_text}}</strong>
+	</div>
+</body>
+</html>
